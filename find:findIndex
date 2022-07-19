@@ -1,0 +1,14 @@
+//findUserByUsername
+function findUserByUsername(users, username){
+	return users.find(function(username){
+		return username;
+	})
+}
+
+//removeUser
+function removeUser(users, userName){
+	return users.findIndex(function(username){
+		return value === userName;
+	}
+	users[value]=''
+}
