@@ -1,7 +1,8 @@
 //findUserByUsername
 function findUserByUsername(users, username){
-	return users.find(function(username){
-		return username;
+	return users.find(function(user){
+		return users.user === username;
+		//needed to refer to (array).(value) === key for return
 	})
 }
 
@@ -11,4 +12,14 @@ function removeUser(users, userName){
 		return value === userName;
 	}
 	users[value]=''
+}
+//removeUser corrected
+function removeUser(userArray, username){
+	let foundIndex = userArray.findIndex(function(user){
+		return user.username === username;
+		}
+	})
+	if (foundIndex === -1) return;
+	
+	return userArray.splice(foundIndex,1)[0];
 }
