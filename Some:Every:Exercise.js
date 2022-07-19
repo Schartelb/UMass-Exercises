@@ -1,13 +1,13 @@
 //hasOddNumber
 function hasOddNumber(arr){
   return arr.some(function(value){
-    return (value %2 != 0);
+    return (value %2 !== 0);
     })
   }
   
 //hasAZero
 function hasAZero(arr){
-  return arr.split('').some(function(value){
+  return arr.toString().split('').some(function(value){
     return value === '0';
     })
   }
@@ -28,16 +28,25 @@ function hasNoDuplicates(arr){
     })
   }
 
+//NoDupes Corrected
+function hasNoDuplicates(arr){
+  return arr.every(function(val){
+    return arr.indexOf(val) === arr.lastIndexOf(val)
+    //checks index of value vs the index of the last found value in string
+  })
+}
+
 //hasCertainKey
-function hasCertainKey(arr){
-  return arr.every(function (value,key){
-    return value.isCatOwner
+function hasCertainKey(arr,key){
+  return arr.every(function (value){
+    return key in value
   })
 }
 
 //hasCertainValue
-function hasCertainValue(arr){
-  return arr.every(function (key,value){
-    return key == value
+function hasCertainValue(arr,key,search){
+  return arr.every(function (value){
+    return val[key] === search 
+    //looks at *key* for associated *value*, compares to *search*
   })
 }
