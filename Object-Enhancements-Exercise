@@ -1,0 +1,28 @@
+function createInstructor(firstName,lastName){
+return {
+	firstName,
+	lastName
+	}
+}
+
+var favoriteNumber = 42;
+var instructor={
+	[42]: "That is my favorite!"
+	}
+	
+var instructor = {
+	firstName: "Colt",
+	sayHi(){
+		return "hi!";
+		},
+	sayBye(){
+		return this.firstName + "says bye!";
+	}
+}
+
+function createAnimal(species,verb,noise){
+	species,
+	verb(){
+		return noise
+		}
+	}
