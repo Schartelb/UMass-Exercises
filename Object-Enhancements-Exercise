@@ -4,11 +4,17 @@ return {
 	lastName
 	}
 }
+//correct
 
 var favoriteNumber = 42;
 var instructor={
 	[42]: "That is my favorite!"
 	}
+//definitely overthought this.  Don't know what I expected
+//answer:const instructor = {
+//	firstName: "Colt"
+//	[favoriteNumber]: "That is my favorite!"
+//}
 	
 var instructor = {
 	firstName: "Colt",
@@ -19,10 +25,14 @@ var instructor = {
 		return this.firstName + "says bye!";
 	}
 }
+//correct!  Ayyyy!
 
 function createAnimal(species,verb,noise){
-	species,
-	verb(){
-		return noise
+	return {
+		species,
+		[verb](){
+			return noise
 		}
 	}
+}
+//close! needed return and square brackets for verb
