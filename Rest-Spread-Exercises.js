@@ -14,3 +14,14 @@ function doubleAndReturnArgs(arr,...rest){
     return [...arr,...double]
 }
 
+const removeRandoms = (...ins) => ({newarray = ins.splice(math.random()*ins.length)})
+
+const extend = (array1, array2) => { newarray =[...array1, ...array2]}
+
+const addKeyVal = (obj,key,val) => {newobj={...obj,obj[key]=val}}
+
+//const removeKey = (obj,key) => {}    spread obj, find key & index, splice index of key?
+
+const combine = (obj1,obj2) => ({newobj={...obj1,...obj2}})
+
+const update = (obj,key,val) => {}//modifed key? so changing out a key/value? or changing the value of a key?
