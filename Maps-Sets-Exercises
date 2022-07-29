@@ -30,6 +30,7 @@
 function isVowel(char){
   return "aeiou".includes(char);
 }
+//creates list of vowels to iterate against
 
 function vowelCount(str){
   const vowelMap = new Map();
