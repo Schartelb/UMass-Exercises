@@ -1,9 +1,47 @@
 //1. [1,2,3,4]
 
 //2. "referee "
+//answer: "ref" it removed all repeating letters, but I think that's due to the "join" call
 
 //3. [1,2,3,true,false]
+//Answer: I misunderstood the question, and thought it was Set.  
+// 0: {Array (3) => true}
+// 1: {Array (3) => false}
 
 //4. const hasduplicate = (arr) => {
-	arr.forEach(val of vals){
-	if va
+//	return [...new Set(arr)].length !== arr.length
+//	}
+// Answer: const hasDupliicate = arr => new Set(arr).size !== arr.length
+// this compares Set(arr).size to arr.length, rather than making a new array from it using set and comparing those
+
+//5. const vowels = [['a':0],['e':0],['i':0],['u':0]]
+//	const vowelCount = (string) => {
+//	const letters = [...string]
+//	const vowelMap = new Map(vowels)
+//	for (let letter of letters){
+//		vowelMap.keys.forEach((letter) =>{
+//		if letter= key 
+// 	
+//   I'm not sure actually how to do this but I know to spread the string into components, compare them to Map keys which are vowels, then increment the value
+//	THEN you can iterate over the keys again, deleting any where the value is 0.
+//	return would be the count of vowels. 
+
+//Answers:
+function isVowel(char){
+  return "aeiou".includes(char);
+}
+
+function vowelCount(str){
+  const vowelMap = new Map();
+  for(let char of str){
+    let lowerCaseChar = char.toLowerCase()
+    if(isVowel(lowerCaseChar)){
+      if(vowelMap.has(lowerCaseChar)){
+        vowelMap.set(lowerCaseChar, vowelMap.get(lowerCaseChar) + 1);
+      } else {
+        vowelMap.set(lowerCaseChar, 1);
+      }
+    }
+  }
+  return vowelMap;
+}
