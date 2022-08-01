@@ -1,0 +1,43 @@
+class Vehicle{
+    constructor(make,model,year){
+        this.make=make
+        this.model=model
+        this.year=year
+        }
+    honk(){
+        return "Beep"
+        }
+    
+    }
+    
+    class Car extends Vehicle{
+        super()
+        this.numWheels = 4
+    }
+    
+    class Motorcycle extends Vehicle{
+        super()
+        this.numWheels = 2
+        
+    revEngine(){
+        return "VROOM!!"
+        }
+    
+    }
+
+class Garage{
+    constructor(capacity){
+        this.vehicles=[]
+        this.vehicles.length=capacity
+    }
+
+add(add){
+    if (this.vehicles.length!=capacity && (add == Vehicle || add == Motorcycle)){
+        this.vehicles.push(add)
+    }else if (this.vehicles.length == capacity){
+        return "Sorry, we're full up!"
+    }else if (add !== Vehicle || add !== Motorcycle){
+        return "Sorry, we only accept Vehicles here!"
+    }
+}
+}
