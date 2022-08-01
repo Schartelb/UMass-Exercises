@@ -8,16 +8,22 @@ class Vehicle{
         return "Beep"
         }
     toString(){
-        return `The vehicle is a ${make} ${model} from ${year}.`
+        return `The vehicle is a ${this.make} ${this.model} from ${this.year}.`
     }
+    //missed adding this in toString
     
     class Car extends Vehicle{
-        super()
+    //still must call constructor
+    constructor(make, model, year)
+    //still must include make, model, year in super callout
+    super(make, model, year)
         this.numWheels = 4
     }
     
     class Motorcycle extends Vehicle{
-        super()
+    //same errors as Vehicle
+    constructor(make, model, year)
+    super(make, model, year)
         this.numWheels = 2
         
     revEngine(){
@@ -29,12 +35,16 @@ class Vehicle{
 class Garage{
     constructor(capacity){
         this.vehicles=[]
+        //this.capacity = capacity
         this.vehicles.length=capacity
     }
 
+//logic needs to use instanceOf and boolean for the vehicle check
+//need to use this.capacity to use capacity
 add(add){
     if (this.vehicles.length!=capacity && (add == Vehicle || add == Motorcycle)){
         this.vehicles.push(add)
+        //add return "Vehicle Added!"
     }else if (this.vehicles.length == capacity){
         return "Sorry, we're full up!"
     }else if (add !== Vehicle || add !== Motorcycle){
