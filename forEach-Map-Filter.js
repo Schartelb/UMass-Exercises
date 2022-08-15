@@ -4,6 +4,14 @@ function doubleValues(arr){
 		value=value*2;
 	})
 }
+//did not create new array for values
+/*function doubleValues(arr) {
+  let newArr = [];
+  arr.forEach(function(val) {
+    newArr.push(val * 2);
+  });
+  return newArr;
+}*/
 
 //onlyEvenValues
 function onlyEvenValues(arr){
@@ -13,6 +21,16 @@ function onlyEvenValues(arr){
 		}
 	)
 }
+//did not create new array for values
+/*function onlyEvenValues(arr) {
+  let newArr = [];
+  arr.forEach(function(val) {
+    if (val % 2 === 0) {
+      newArr.push(val);
+    }
+  });
+  return newArr;
+}*/
 
 //showFirstandLast
 function showFirstandLast(arr){
@@ -24,6 +42,15 @@ function showFirstandLast(arr){
 		}
 	)
 }
+//didn't need to split string.  forEach does that for us.  
+/*function showFirstAndLast(arr) {
+  let newArr = [];
+  arr.forEach(function(val) {
+    newArr.push(val[0] + val[val.length - 1]);
+  });
+  return newArr;
+}*/
+
 
 //addKeyAndValue
 function addKeyAndValue(arr,key,value){
@@ -31,10 +58,33 @@ function addKeyAndValue(arr,key,value){
 	return name+=key+=value;
 	})
 }
+//not sure what I thought this would accomplish here
+/*function addKeyAndValue(arr, key, value) {
+  arr.forEach(function(val) {			for each arr val, 
+    val[key] = value;					assign the value given to key given
+  });
+  return arr;
+}*/
 
 //vowelCount
 	function vowelCount(arr){}
+//I'm terrible with vowel assignments
+/*function vowelCount(str) {
+  let splitArr = str.split("");
+  let obj = {};
+  const vowels = "aeiou";
 
+  splitArr.forEach(function(letter) {                value in function for forEach is what is being iterated across
+    let lowerCasedLetter = letter.toLowerCase()
+    if (vowels.indexOf(lowerCasedLetter) !== -1) {
+      if (obj[lowerCasedLetter]) {
+        obj[lowerCasedLetter]++;
+      } else {
+        obj[lowerCasedLetter] = 1;
+      }
+    }
+  });
+  return obj;*/
 
 //doubleValuesWithMap
 function doubleValuesWithMap(arr){
@@ -44,23 +94,23 @@ function doubleValuesWithMap(arr){
 }
 
 //valTimesIndex
-function valTimesIndex(arr,index){
-	val.map(function(val){
+function valTimesIndex(arr){
+	arr.map(function(val,index){
 	return val*index;
 	})
 }
 
 //extractKey
 function extractKey(arr,key){
-	arr.map(function(arr){
-		return arr.key;
+	arr.map(function(val){
+		return val.key;
 	})
 }
 
 //extractFullName
 function extractFullName(arr,first,last){
-	arr.map(function(arr){
-		return arr.first+=arr.last;
+	arr.map(function(val){
+		return val.first+=val.last;
 	})
 }
 
