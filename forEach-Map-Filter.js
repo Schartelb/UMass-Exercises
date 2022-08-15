@@ -11,7 +11,7 @@ function onlyEvenValues(arr){
 		if(value %2==0){
 			return value}
 		}
-	})
+	)
 }
 
 //showFirstandLast
@@ -22,7 +22,7 @@ function showFirstandLast(arr){
 	string=string[0]+=string[len]
 	return string;
 		}
-	})
+	)
 }
 
 //addKeyAndValue
@@ -46,7 +46,7 @@ function doubleValuesWithMap(arr){
 //valTimesIndex
 function valTimesIndex(arr,index){
 	val.map(function(val){
-	return val*index:
+	return val*index;
 	})
 }
 
@@ -81,10 +81,10 @@ function find(arr,value){
 
 //findInObj
 function findInObj(arr,key,value){
-	arr.forEach(key,value){
+	arr.forEach((key,value){
 		if(arr.key==value){
 		return arr}
-	}
+	})
 }
 
 //removeVowels
